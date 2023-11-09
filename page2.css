@@ -1,0 +1,56 @@
+body {
+  padding-top: 50px;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+#container {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 350px;
+}
+
+#head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  padding: 0.25rem 2rem;
+  border: 1px solid black;
+  background-color: white;
+  z-index: 1;
+}
+#card {
+  position: absolute;
+  top: 2.5rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+}
+#form-div {
+  width: 100%;
+  padding-top: 5px;
+}
+#content-type {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  outline: none;
+}
+.selection-card {
+  border: 1px solid black;
+  margin: 5px auto;
+}
+.selection-card p {
+  padding: 0px 8px;
+}
+.symbol-container {
+  display: flex;
+  justify-content: end;
+  height: 20px;
+  padding: 2px 4px;
+}
