@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1280px;
+}
+
+.chart {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.bars {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: end;
+  height: 300px;
+  border: 1px solid black;
+  flex: 1;
+}
+
+.bar {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+}
+
+.bar-fill {
+  background-color: #b68c00;
+  color: #fff;
+  height: 100%;
+
+  /* position: relative; */
+}
+
+.month-names {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin: 10px 0 0 25px;
+}
+#chart-container {
+  display: flex;
+  /* flex-direction: row-reverse; */
+}
+.scale {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  margin-right: 5px;
+}
