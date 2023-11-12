@@ -7,8 +7,6 @@ body {
 
 .chart {
   text-align: center;
-  max-width: 50%;
-  margin: 0 auto;
 }
 
 .chart-title {
@@ -57,4 +55,22 @@ body {
   flex-direction: column-reverse;
   justify-content: space-between;
   margin-right: 5px;
+}
+#form {
+  position: absolute;
+  left: 542px;
+  top: 212px;
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 4px 3px 10px 10px #00000042;
+}
+@media (max-width: 425px) {
+  #form {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    box-shadow: 4px 3px 10px 10px #00000042;
+  }
 }
