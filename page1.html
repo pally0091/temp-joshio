@@ -10,117 +10,151 @@
       rel="stylesheet"
       href="page1.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="chart-form.css"
+    />
     <title>Page 1</title>
   </head>
   <body>
     <h1>Page 1</h1>
-    <!-- chart  -->
-    <div>
-      <div class="chart">
-        <div class="chart-title">Email Performence Report</div>
-        <div id="chart-container">
-          <div class="scale">
-            <div class="scale-label">0k</div>
-            <div class="scale-label">25k</div>
-            <div class="scale-label">50k</div>
-            <div class="scale-label">75k</div>
-            <div class="scale-label">100k</div>
-          </div>
-          <div class="bars">
-            <div
-              class="bar"
-              style="height: 80%"
-            >
-              <div class="bar-fill">80</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 60%"
-            >
-              <div class="bar-fill">60</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 75%"
-            >
-              <div class="bar-fill">75</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 90%"
-            >
-              <div class="bar-fill">90</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 70%"
-            >
-              <div class="bar-fill">70</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 50%"
-            >
-              <div class="bar-fill">50</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 40%"
-            >
-              <div class="bar-fill">40</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 40%"
-            >
-              <div class="bar-fill">40</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 40%"
-            >
-              <div class="bar-fill">40</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 40%"
-            >
-              <div class="bar-fill">40</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 40%"
-            >
-              <div class="bar-fill">40</div>
-            </div>
-            <div
-              class="bar"
-              style="height: 40%"
-            >
-              <div class="bar-fill">40</div>
-            </div>
+    <div
+      class="worper"
+      style="position: relative; padding: 0 5px"
+    >
+      <div
+        class="boxdiv"
+        style="
+          background: #fff;
+          width: 100%;
+          max-width: 500px;
+          box-shadow: 4px 3px 10px 10px #00000042;
+        "
+      >
+        <div class="chart">
+          <div class="chart-title">Email Performence Report</div>
+
+          <div
+            style="border: 1px solid #ccc; border-radius: 5px; padding: 10px"
+          >
+            <canvas
+              id="myChart"
+              style="height: 400px"
+            ></canvas>
           </div>
         </div>
+      </div>
 
-        <!-- Months names below the chart -->
-        <div class="month-names">
-          <div class="bar-label">Jan</div>
-          <div class="bar-label">Feb</div>
-          <div class="bar-label">Mar</div>
-          <div class="bar-label">Apr</div>
-          <div class="bar-label">May</div>
-          <div class="bar-label">Jun</div>
-          <div class="bar-label">Jul</div>
-          <div class="bar-label">Aug</div>
-          <div class="bar-label">Sep</div>
-          <div class="bar-label">Oct</div>
-          <div class="bar-label">Nov</div>
-          <div class="bar-label">Dec</div>
+      <!-- create report form  -->
+      <div
+        id="form"
+        class="boxdiv"
+      >
+        <h2>Create Custom Report</h2>
+        <br />
+        <p>Report Name</p>
+        <input
+          id="input-name"
+          type="text"
+          placeholder="Enter a Report Name"
+        />
+        <br />
+        <br />
+        <div class="selection">
+          <div>
+            <p>Audience</p>
+            <select class="content-type">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <div>
+            <p>Audience</p>
+            <select class="content-type">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <br />
+        <h4>Build your Report</h4>
+
+        <div>
+          <p>Metrics</p>
+          <div id="btn-container">
+            <button>Clicked x</button>
+            <button>Clicked x</button>
+            <button>Clicked x</button>
+            <button>Clicked x</button>
+          </div>
+          <br />
+          <select class="content-type">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
         </div>
       </div>
     </div>
+    <!-- chart  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
 
-    <!-- create report form  -->
-    <div id="form"> form </div>
+      const labels = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "My First Dataset",
+            data: [65, 59, 80, 81, 56, 55, 40, 30, 20, 10, 50, 100],
+            backgroundColor: [
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+            ],
+            borderColor: [
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+              "#d0984c",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      new Chart(ctx, {
+        type: "bar",
+        data: data,
+        options: {
+          maintainAspectRatio: false,
+        },
+      });
+    </script>
   </body>
 </html>
