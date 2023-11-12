@@ -1,44 +1,54 @@
-#form{
-    /* text-align: center; */
-    border: 1px solid black;
-    max-width: 550px;
-    margin: 0 auto;
-    border-radius: 10px;
-    padding: 1.5rem;
+.boxdiv {
+  /* text-align: center; */
+  /* border: 1px solid black; */
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1.5rem;
 }
-p{
-text-align: justify;
-line-height: 0;
+#form input,
+select {
+  border: 2px solid black;
 }
-#input-name{
-    width: 96%;
-    padding: 5px;
-    /* margin: 0 auto; */
+#form h2 {
+  text-align: center;
 }
-.selection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#form h4 {
+  font-size: 20px;
 }
-.selection div{
-    width: 48%;
-    padding: 4px;
+#form p {
+  font-weight: 800;
+  text-align: justify;
+  line-height: 0;
 }
-.selection div p{
-    font-weight: 800;
+#input-name {
+  width: 96%;
+  padding: 5px;
+  /* margin: 0 auto; */
 }
-.content-type{
-width: 100%;
-padding: 5px;
-
+.selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-#btn-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.selection div {
+  width: 48%;
+  padding: 4px;
 }
-#btn-container button{
-    flex: 1;
-    margin: 0 2px;
-    padding: 5px;
+.selection div p {
+  font-weight: 800;
+}
+.content-type {
+  width: 100%;
+  padding: 5px;
+}
+#btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#btn-container button {
+  flex: 1;
+  margin: 0 2px;
+  padding: 5px;
 }
